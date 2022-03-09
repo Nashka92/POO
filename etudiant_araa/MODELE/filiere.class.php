@@ -13,6 +13,7 @@ class Filiere {
         self::$compteur = self::$compteur + 1;
         $this->id = self :: $compteur;
         //l’identifiant est auto incrément.
+        //faire en sorte que l'id soit un compteur
         $this->libelle = $libelle;
         $this->code = $code;
     }

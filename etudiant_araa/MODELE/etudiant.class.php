@@ -16,8 +16,8 @@ class Etudiant {
     {
         self::$compteur = self::$compteur + 1;
         $this->id = self :: $compteur;
-        //id est auto incrément
-        // c'est pour passer d'un étudiant a un autre
+        //l’identifiant est auto incrément.
+        //faire en sorte que l'id soit un compteur
         $this->nom = $nom;
         $this->prenom = $prenom;
         $this->dateNaissance = $dateNaissance;
@@ -27,8 +27,10 @@ class Etudiant {
 
     public function __toString() {
 
-        //afficher info de l'étudiant
-        //Je suis l'étudiant Rami Mouad ma date de naissance est : 2013/01/02
+        //__toString va ici afficher les filières
+        //La méthode magique __toString() va être appelée dès que l’on va traiter un objet comme une chaine de caractères
+        //(par exemple lorsqu’on tente d’echo un objet).Attention, cette méthode doit obligatoirement retourner une chaine
+        //ou une erreur sera levée par le PHP
         return $this->filiere->__toString()."Je suis l'étudiant"." ".$this->nom." ".$this->prenom." "."ma date de naissance est: ".$this->dateNaissance;
 
          

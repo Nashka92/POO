@@ -10,6 +10,7 @@ class Employe extends Personne{
     public function __construct($salaire,$nom,$prenom)
     {
         //Je vais récuperer le construct de la Class Personne avec "parent :: __construct" 
+        // on va uniquement initialisé l'attribut qu'il lui est prpore, donc ici $salaire
         parent :: __construct($nom,$prenom);
         $this->salaire = $salaire;
         
